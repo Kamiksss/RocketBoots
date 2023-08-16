@@ -1,0 +1,4 @@
+name: BootsofCloud
+version: '${project.version}'
+main: me.kamiksss.bootsofcloud.BootsOfCloud
+api-version: '1.19'
