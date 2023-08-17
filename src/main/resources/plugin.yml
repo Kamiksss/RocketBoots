@@ -1,4 +1,4 @@
-name: BootsofCloud
-version: '${project.version}'
+name: RocketBoots
+version: '2'
 main: me.kamiksss.bootsofcloud.BootsOfCloud
 api-version: '1.19'

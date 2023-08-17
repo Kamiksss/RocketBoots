@@ -30,6 +30,7 @@ public final class BootsOfCloud extends JavaPlugin {
         goldenFeatherMeta.setDisplayName("§6§lGolden Feather");
         goldenFeatherMeta.addEnchant(Enchantment.PROTECTION_FALL, 5, true);
         goldenFeatherMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        goldenFeatherMeta.setCustomModelData(124);
         goldenFeather.setItemMeta(goldenFeatherMeta);
         GOLDEN_FEATHER = goldenFeather;
 
@@ -50,6 +51,7 @@ public final class BootsOfCloud extends JavaPlugin {
         lore.add(ChatColor.DARK_GRAY +""+ ChatColor.ITALIC + "Prevents Fall Damage and Gives Jump Boost" + ChatColor.RESET);
 
         netheriteCloudBootsMeta.setLore(lore);
+        netheriteCloudBootsMeta.setCustomModelData(123);
 
         netheriteCloudBoots.setItemMeta(netheriteCloudBootsMeta);
         NETHERITE_CLOUD_BOOTS = netheriteCloudBoots;
