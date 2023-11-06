@@ -8,12 +8,9 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.*;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.jetbrains.annotations.NotNull;
-
 import java.util.ArrayList;
 
-public final class BootsOfCloud extends JavaPlugin {
-
+public final class RocketBoots extends JavaPlugin {
 
     @Override
     public void onEnable() {
@@ -24,6 +21,7 @@ public final class BootsOfCloud extends JavaPlugin {
 
     public static ItemStack GOLDEN_FEATHER;
     public static ItemStack NETHERITE_CLOUD_BOOTS;
+
     public static void registerGoldenFeather() {
         ItemStack goldenFeather = new ItemStack(Material.FEATHER, 1);
         ItemMeta goldenFeatherMeta = goldenFeather.getItemMeta();
@@ -34,21 +32,19 @@ public final class BootsOfCloud extends JavaPlugin {
         goldenFeather.setItemMeta(goldenFeatherMeta);
         GOLDEN_FEATHER = goldenFeather;
 
-        ShapedRecipe goldenFeatherRecipe = new ShapedRecipe(NamespacedKey.minecraft("goldenfeather"),goldenFeather);
-        goldenFeatherRecipe.shape(" F ", "FGF"," F ");
+        ShapedRecipe goldenFeatherRecipe = new ShapedRecipe(NamespacedKey.minecraft("goldenfeather"), goldenFeather);
+        goldenFeatherRecipe.shape(" F ", "FGF", " F ");
         goldenFeatherRecipe.setIngredient('F', Material.FEATHER);
-        goldenFeatherRecipe.setIngredient('G',Material.GOLD_INGOT);
+        goldenFeatherRecipe.setIngredient('G', Material.GOLD_INGOT);
 
         Bukkit.addRecipe(goldenFeatherRecipe);
-
-
-
 
         ItemStack netheriteCloudBoots = new ItemStack(Material.NETHERITE_BOOTS, 1);
         ItemMeta netheriteCloudBootsMeta = netheriteCloudBoots.getItemMeta();
         netheriteCloudBootsMeta.setDisplayName("§bNetherite Cloud Boots");
         ArrayList<String> lore = new ArrayList();
-        lore.add(ChatColor.DARK_GRAY +""+ ChatColor.ITALIC + "Prevents Fall Damage and Gives Jump Boost" + ChatColor.RESET);
+        lore.add(ChatColor.DARK_GRAY + "" + ChatColor.ITALIC + "Prevents Fall Damage and Gives Jump Boost"
+                + ChatColor.RESET);
 
         netheriteCloudBootsMeta.setLore(lore);
         netheriteCloudBootsMeta.setCustomModelData(123);
@@ -56,8 +52,8 @@ public final class BootsOfCloud extends JavaPlugin {
         netheriteCloudBoots.setItemMeta(netheriteCloudBootsMeta);
         NETHERITE_CLOUD_BOOTS = netheriteCloudBoots;
 
-
-        ShapelessRecipe netheriteCloudBootsRecipe = new ShapelessRecipe(NamespacedKey.minecraft("netheritecloudboots"),netheriteCloudBoots);
+        ShapelessRecipe netheriteCloudBootsRecipe = new ShapelessRecipe(NamespacedKey.minecraft("netheritecloudboots"),
+                netheriteCloudBoots);
         netheriteCloudBootsRecipe.addIngredient(Material.NETHERITE_BOOTS).addIngredient(goldenFeather);
 
         Bukkit.addRecipe(netheriteCloudBootsRecipe);
